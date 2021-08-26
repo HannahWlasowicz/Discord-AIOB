@@ -1,0 +1,22 @@
+{
+  "name": "discord-aiob",
+  "version": "1.0.0",
+  "description": "An all in one bot for Discord. Think of YAGPB mixed with MEE6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HannahWlasowicz/Discord-AIOB.git"
+  },
+  "author": "akaarie and HWaso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HannahWlasowicz/Discord-AIOB/issues"
+  },
+  "homepage": "https://github.com/HannahWlasowicz/Discord-AIOB#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  }
+}
