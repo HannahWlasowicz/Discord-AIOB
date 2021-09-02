@@ -1,7 +1,8 @@
 const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+require('dotenv').config();
 
-const prefix = '-';
+const prefix = process.env.PREFIX;
 
 // Get's commands from folder
 const fs = require('fs');
@@ -34,4 +35,4 @@ client.on('messageCreate', message =>{
   }
 
 })
-  client.login('');
+  client.login(process.env.DISCORD_TOKEN);
