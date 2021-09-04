@@ -1,0 +1,36 @@
+Music:Grovy/Rythm clone
+	*Spotify
+		-Play actual spotify link
+		-Can play playlist/album
+	*YouTube
+	*SoundCloud
+	*Apple Music
+
+Birthdays
+	*Send message at 12am at given timezone
+
+Role Reaction
+	*Give user a given role when x emoji is used
+
+Dice Rolling Feature
+	*/r d12 would give a number between 1-12
+	*Can be any number 
+	*Can be rolled for multiple time ex /r 2d6
+		-Command will be !r args or !roll args
+			#! is the given prefix for the command
+
+Add/Remove role for streamers
+	*Check if user is live
+		-If so give "streamer" role
+		-Remove once they have finished going live
+	*Command to show what game each user is playing that is live
+
+Twitch/YouTube Live Notification
+	*Give notification when user goes live/new video
+
+Game/Economy
+	*For each word you type you get money
+	*Work on expanding it out further
+	*Possibly redeem currency for something? or just flex
+	*Add in gambling(Do so responsibly)
+		-Similar to what Twitch has
