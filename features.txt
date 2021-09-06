@@ -34,3 +34,7 @@ Game/Economy
 	*Possibly redeem currency for something? or just flex
 	*Add in gambling(Do so responsibly)
 		-Similar to what Twitch has
+
+AFK
+	*Mutes and defans you
+	*Puts u in afk channel

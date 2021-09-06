@@ -2,6 +2,8 @@ const { Client, Intents, Collection } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 require('dotenv').config();
 
+const mongoose = require("mongoose");
+
 const prefix = process.env.PREFIX;
 
 // Get's commands from folder
@@ -35,4 +37,18 @@ client.on('messageCreate', message =>{
   }
 
 })
+
+// Database connection
+mongoose.connect(process.env.DB_SRV
+//   useCreatendex: true, 
+//   useFindAndModify: false, 
+//   useNewUrlParser: true, 
+//   useUnifiedTopology: true 
+).then(() =>{
+  console.log('Connected to the database!');
+}).catch((err) =>{
+  console.log(err);
+});
+
+
   client.login(process.env.DISCORD_TOKEN);
