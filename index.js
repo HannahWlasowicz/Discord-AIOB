@@ -1,4 +1,4 @@
-const { Client, Intents, Collection } = require('discord.js');
+const { Client, Intents, Collection, MessageEmbed } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 require('dotenv').config();
 
@@ -31,6 +31,9 @@ client.on('messageCreate', message =>{
 
   if(command === 'ping'){
     client.commands.get('ping').execute(message, args);
+  }
+  else if(command === 'rules'){
+    client.commands.get('rules').execute(message, args, MessageEmbed);
   }
   else{
     message.channel.send("What??")

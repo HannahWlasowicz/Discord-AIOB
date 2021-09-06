@@ -1,7 +1,7 @@
 module.exports = {
     name: 'bday',
-    description: "This is a ping command!",
+    description: "Command to set a birthday",
     execute(message, args){
-                
+        
     }
 }
