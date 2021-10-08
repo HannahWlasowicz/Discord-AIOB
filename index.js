@@ -8,7 +8,6 @@ const prefix = process.env.PREFIX;
 
 // Get's commands from folder
 const fs = require('fs');
-
 client.commands = new Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -34,6 +33,9 @@ client.on('messageCreate', message =>{
   }
   else if(command === 'rules'){
     client.commands.get('rules').execute(message, args, MessageEmbed);
+  }
+  else if (command === 'clear'){
+    client.commands.get('clear').execute(message, args);
   }
   else{
     message.channel.send("What??")
