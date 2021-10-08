@@ -1,5 +1,5 @@
 const { Client, Intents, Collection, MessageEmbed } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES], partials: ["MESSAGE", "CHANNEL", "REACTION"] });
 require('dotenv').config();
 
 const mongoose = require("mongoose");
@@ -43,6 +43,9 @@ client.on('messageCreate', message =>{
   }
   else if (command === 'clear'){
     client.commands.get('clear').execute(message, args);
+  }
+  else if (command === 'reactionrole'){
+    client.commands.get('reactionrole').execute(message, args, MessageEmbed, client);
   }
   else{
     message.channel.send("What??")
