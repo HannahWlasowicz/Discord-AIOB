@@ -5,6 +5,7 @@ require('dotenv').config();
 const mongoose = require("mongoose");
 
 const prefix = process.env.PREFIX;
+const memberCounter = require('./counters/member-counter');
 
 // Get's commands from folder
 const fs = require('fs');
@@ -20,6 +21,7 @@ for(const file of commandFiles){
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    memberCounter(client);
   });
   
 client.on('guildMemberAdd', guildMember => {
