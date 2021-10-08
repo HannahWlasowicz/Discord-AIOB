@@ -5,7 +5,7 @@ require('dotenv').config();
 const mongoose = require("mongoose");
 
 const prefix = process.env.PREFIX;
-const memberCounter = require('./counters/member-counter');
+// const memberCounter = require('./counters/member-counter');
 
 // Get's commands from folder
 const fs = require('fs');
@@ -21,7 +21,7 @@ for(const file of commandFiles){
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    memberCounter(client);
+    // memberCounter(client);
   });
   
 client.on('guildMemberAdd', guildMember => {
@@ -47,10 +47,10 @@ client.on('messageCreate', message =>{
     client.commands.get('clear').execute(message, args);
   }
   else if (command === 'play'){
-    client.commands.get('play').execute(message, args, MessageEmbed, client);
+    client.commands.get('play').execute(message, args);
   }
   else if (command === 'leave'){
-    client.commands.get('leave').execute(message, args, MessageEmbed, client);
+    client.commands.get('leave').execute(message, args);
   }
   else if (command === 'reactionrole'){
     client.commands.get('reactionrole').execute(message, args, MessageEmbed, client);
