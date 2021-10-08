@@ -46,6 +46,12 @@ client.on('messageCreate', message =>{
   else if (command === 'clear'){
     client.commands.get('clear').execute(message, args);
   }
+  else if (command === 'play'){
+    client.commands.get('play').execute(message, args, MessageEmbed, client);
+  }
+  else if (command === 'leave'){
+    client.commands.get('leave').execute(message, args, MessageEmbed, client);
+  }
   else if (command === 'reactionrole'){
     client.commands.get('reactionrole').execute(message, args, MessageEmbed, client);
   }
