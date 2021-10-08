@@ -42,16 +42,16 @@ client.on('messageCreate', message =>{
 })
 
 // Database connection
-mongoose.connect(process.env.DB_SRV
-//   useCreatendex: true, 
-//   useFindAndModify: false, 
-//   useNewUrlParser: true, 
-//   useUnifiedTopology: true 
-).then(() =>{
-  console.log('Connected to the database!');
-}).catch((err) =>{
-  console.log(err);
-});
+// mongoose.connect(process.env.DB_SRV
+// //   useCreatendex: true, 
+// //   useFindAndModify: false, 
+// //   useNewUrlParser: true, 
+// //   useUnifiedTopology: true 
+// ).then(() =>{
+//   console.log('Connected to the database!');
+// }).catch((err) =>{
+//   console.log(err);
+// });
 
 
   client.login(process.env.DISCORD_TOKEN);
