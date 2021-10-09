@@ -1,13 +1,8 @@
 const { Client, Intents, Collection, MessageEmbed } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES], partials: ["MESSAGE", "CHANNEL", "REACTION"] });
 require('dotenv').config();
+// const mongoose = require("mongoose");
 
-const mongoose = require("mongoose");
-
-const prefix = process.env.PREFIX;
-// const memberCounter = require('./counters/member-counter');
-
-// Get's commands from folder
 const fs = require('fs');
 client.commands = new Collection();
 client.events = new Collection();
@@ -15,19 +10,7 @@ client.events = new Collection();
   require(`./handlers/${handler}`)(client);
 })
 
-// const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-// for(const file of commandFiles){
-//   const command = require(`./commands/${file}`);
 
-//   client.commands.set(command.name, command);
-// }
-
-
-// client.on('ready', () => {
-//     console.log(`Logged in as ${client.user.tag}!`);
-//     // memberCounter(client);
-//   });
-  
 // client.on('guildMemberAdd', guildMember => {
 //   let welcomeRole = guildMember.guild.roles.cache.find(role => role.name ==='Member');
 
