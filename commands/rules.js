@@ -1,7 +1,7 @@
 module.exports = {
     name: 'rules',
     description: "Embed 0_o",
-    execute(message, args, MessageEmbed){
+    execute(client, message, args, MessageEmbed){
         const embed = new MessageEmbed()
         .setColor('#FF5733')
         .setTitle('Test')

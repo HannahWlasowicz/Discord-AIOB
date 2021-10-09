@@ -1,7 +1,7 @@
 module.exports = {
     name: 'ping',
     description: "This is a ping command!",
-    execute(message, args){
+    execute(client, message, args){
         if(message.member.roles.cache.has('883895014688718918')){
             message.channel.send('pong!');
         }

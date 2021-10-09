@@ -1,7 +1,7 @@
 module.exports = {
     name: 'reactionrole',
     description: "This is a ping command!",
-    async execute(message, args, MessageEmbed, client){
+    async execute(client, message, args, MessageEmbed){
         const channel = '896089122106658897'
         const purpleRole = message.guild.roles.cache.find(role => role === "Purple");
         const redRole = message.guild.roles.cache.find(role => role === "Red");
